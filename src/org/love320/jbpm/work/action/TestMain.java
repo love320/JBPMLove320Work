@@ -6,7 +6,7 @@ public class TestMain extends TestCase{
 
 
 	public void testAction(){
-		System.out.println(">>.");
+		
 	}
 	
 }
