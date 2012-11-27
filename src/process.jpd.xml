@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<process name="会签实例" xmlns="http://jbpm.org/4.3/jpdl" description="会签中一个不同意，会签就结束">  
+    <start g="110,14,48,48" name="Start">  
+        <transition g="-95,-17" name="to JointlySign" to="会签"/>  
+    </start>  
+    <end g="110,264,48,48" name="End"/>  
+    <task g="88,96,92,52" name="会签">  
+        <assignment-handler class="test.join.AssignTask">  
+        </assignment-handler>  
+        <transition g="-71,-17" name="to 执行" to="执行"/>  
+        <transition g="-41,-17" name="to 结束" to="End"/>  
+    </task>  
+    <state g="16,180,92,52" name="执行">  
+        <transition g="-41,-17" name="to End" to="End"/>  
+    </state>  
+</process>  
